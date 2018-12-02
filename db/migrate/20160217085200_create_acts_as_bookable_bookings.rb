@@ -8,7 +8,9 @@ class CreateActsAsBookableBookings < ActiveRecord::Migration
       t.column :time_start, :datetime
       t.column :time_end, :datetime
       t.column :time, :datetime
+      t.column :status, :integer, default: 0
       t.datetime :created_at
+      t.datetime :updated_at
     end
   end
 end
