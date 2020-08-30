@@ -48,6 +48,26 @@ module ActsAsBookable
       data[:series]
     end
 
+    def is_enrollment?
+      false
+    end
+
+    def is_booking?
+      true
+    end
+
+    def successful?
+      status == 0
+    end
+
+    def cancelled?
+      status == 1
+    end
+
+    def is_order?
+      false
+    end
+
     private
       ##
       # Validation method. Check if the bookable resource is actually bookable
