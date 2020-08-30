@@ -13,6 +13,9 @@ module ActsAsBookable
     validate  :bookable_must_be_bookable,
               :booker_must_be_booker
 
+    serialize :data, Hash
+    serialize :services, Array
+
     ##
     # Retrieves overlapped bookings, given a bookable and some booking options
     #
@@ -32,6 +35,18 @@ module ActsAsBookable
       end
       query
     }
+
+    def admin_notes
+      data[:admin_notes]
+    end
+
+    def admin_notes=(text)
+      data[:admin_notes] = text
+    end
+
+    def series
+      data[:series]
+    end
 
     private
       ##
