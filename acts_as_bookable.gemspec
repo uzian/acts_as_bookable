@@ -26,21 +26,20 @@ Gem::Specification.new do |gem|
     gem.post_install_message = File.read('UPGRADING.md')
   end
 
-  gem.add_dependency 'ice_cube', '~> 0.16'
+  gem.add_dependency 'ice_cube'
   gem.add_runtime_dependency 'activerecord', ['>= 3.2', '< 7']
   gem.add_runtime_dependency 'activesupport', ['>= 3.2', '< 7']
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rails'
-  gem.add_development_dependency 'sqlite3', '~> 1.3'
-  gem.add_development_dependency 'mysql2', '~> 0.5.2'
-  gem.add_development_dependency 'pg', '~> 0.18'
-  gem.add_development_dependency 'rspec-rails', '~> 3'
-  gem.add_development_dependency 'rspec', '~> 3'
+  gem.add_development_dependency 'sqlite3'
+  gem.add_development_dependency 'mysql2'
+  gem.add_development_dependency 'rspec-rails'
+  gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rspec_junit_formatter'
-  gem.add_development_dependency 'coveralls', '~> 0.8'
-  gem.add_development_dependency 'factory_girl_rails', '~> 4.6'
-  gem.add_development_dependency 'barrier', '~> 1.0'
-  gem.add_development_dependency 'database_cleaner', '~>1.5'
-  gem.add_development_dependency 'awesome_print', '~>1.6'
+  gem.add_development_dependency 'coveralls'
+  gem.add_development_dependency 'factory_bot_rails'
+  gem.add_development_dependency 'barrier'
+  gem.add_development_dependency 'database_cleaner'
+  gem.add_development_dependency 'awesome_print'
 end
